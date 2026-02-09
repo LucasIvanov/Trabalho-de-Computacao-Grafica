@@ -100,7 +100,7 @@ Algoritmo de ocultação de superfícies que determina quais faces são visívei
 
 ## Estrutura do Código
 
-O arquivo `main.py` contém todas as classes necessárias:
+O arquivo `main.py` contém:
 
 - **Transformações** - Matrizes 4x4 (translação, rotação, escala)
 - **Cube** - Geometria e transformações do cubo

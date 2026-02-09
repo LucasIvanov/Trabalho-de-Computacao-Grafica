@@ -1,12 +1,6 @@
 # Modelador 3D - Trabalho Final de Computação Gráfica
 
 **UNIOESTE - 2025**  
-**Disciplina:** Computação Gráfica  
-**Professor:** Adair Santa Catarina  
-
-**Autor:** [Seu Nome Completo]  
-**RA:** [Seu RA]
-
 ---
 
 ## Requisitos Implementados
@@ -28,7 +22,7 @@
 - pygame 2.5.2+
 - numpy 1.24.0+
 
-### Linux (Ubuntu/Debian) - RECOMENDADO
+### Linux (Ubuntu/Debian) 
 
 **Opção 1: Instalação Automática**
 ```bash
@@ -73,23 +67,6 @@ pip install pygame numpy
 # 4. Executar
 python main.py
 ```
-
-### macOS
-
-```bash
-# 1. Criar ambiente virtual
-python3 -m venv venv
-
-# 2. Ativar ambiente
-source venv/bin/activate
-
-# 3. Instalar dependências
-pip install pygame numpy
-
-# 4. Executar
-python3 main.py
-```
-
 ---
 
 ## Controles
@@ -139,7 +116,7 @@ Algoritmo de ocultação de superfícies que determina quais faces são visívei
 
 ## Estrutura do Código
 
-O arquivo `main.py` contém todas as classes necessárias:
+O arquivo `main.py` contém:
 
 - **Transformações** - Matrizes 4x4 (translação, rotação, escala)
 - **Cube** - Geometria e transformações do cubo
@@ -150,32 +127,7 @@ O arquivo `main.py` contém todas as classes necessárias:
 
 ---
 
-## Envio do Trabalho
 
-### Por Email
-
-**Para:** prof.stacatarina@gmail.com  
-**Assunto:** Trabalho Final - CG 2025 - [Seu Nome]
-
-**Conteúdo do email:**
-```
-Prezado Professor Adair,
-
-Segue em anexo o código-fonte do Trabalho Final de Computação Gráfica.
-
-Nome: [Seu Nome Completo]
-RA: [Seu RA]
-
-EXECUÇÃO:
-1. pip install pygame numpy
-2. python main.py
-
-Sistema: Linux/Windows/macOS
-Python: 3.10+
-
-Atenciosamente,
-[Seu Nome]
-```
 
 ### Preparar ZIP
 
@@ -186,7 +138,6 @@ zip -r modelador3d.zip main.py README.md
 # Ou no Windows
 # Selecionar main.py e README.md → Botão direito → Enviar para → Pasta compactada
 ```
-
 ---
 
 ## Solução de Problemas
@@ -205,6 +156,3 @@ pip install pygame numpy
 - Reduzir número de cubos
 
 ---
-
-**Data de Entrega:** 09/02/2026  
-**Apresentação:** 12/02/2026

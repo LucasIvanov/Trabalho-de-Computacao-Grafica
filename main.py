@@ -486,6 +486,9 @@ class Modeler3D:
         print("  F1       : Alternar sombreamento")
         print("  Mouse    : Rotacionar câmera")
         print("  ESC      : Sair")
+        print("  1/2/3/4  : Mover luz")
+        print("  U/J      : Aumentar/diminuir difusao") 
+        print("  I/K      : Aumentar/diminuir brilho")
         print("=" * 60)
         
         while self.running:

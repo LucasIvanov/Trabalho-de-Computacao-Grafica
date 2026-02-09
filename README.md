@@ -84,6 +84,9 @@ python main.py
 - **Y** - Rotacionar no eixo Y (15°)
 - **Z** - Rotacionar no eixo Z (15°)
 - **+/-** - Escalar (uniforme)
+- **1/2/3/4** - Mudar o posicionamento da luz
+- **U/J** - Aumentar/diminuir difusão
+- **I/K** - Aumentar/diminuir brilho
 
 ### Visualização
 - **Mouse** (arrastar) - Rotacionar câmera

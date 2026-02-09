@@ -433,6 +433,24 @@ class Modeler3D:
                 self.selected.scale(1.15)
             elif event.key == pygame.K_MINUS:
                 self.selected.scale(0.85)
+            elif event.key == pygame.K_1:
+                self.light.position[0] += 1
+            elif event.key == pygame.K_2:
+                self.light.position[0] -= 1
+            elif event.key == pygame.K_3:
+                self.light.position[1] += 1
+            elif event.key == pygame.K_4:
+                self.light.position[1] -= 1
+            elif event.key == pygame.K_u:
+                self.selected.diffuse = min(1.0, self.selected.diffuse + 0.1)
+            elif event.key == pygame.K_j:
+                self.selected.diffuse = max(0.0, self.selected.diffuse - 0.1)
+            elif event.key == pygame.K_i:
+                self.selected.shininess += 5
+            elif event.key == pygame.K_k:
+                self.selected.shininess = max(1, self.selected.shininess - 5)
+
+
                 
     def render(self):
         self.screen.fill((30, 30, 40))

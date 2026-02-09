@@ -1,0 +1,177 @@
+# Modelador 3D - Trabalho Final de Computação Gráfica
+
+**UNIOESTE - 2025**  
+**Disciplina:** Computação Gráfica  
+**Professor:** Adair Santa Catarina  
+
+**Autor:** [Seu Nome Completo]  
+**RA:** [Seu RA]
+
+---
+
+## Requisitos Implementados
+
+✅ **1. Modelagem de cenas 3D com cubos**  
+✅ **2. Projeção perspectiva**  
+✅ **3. Transformações geométricas** (translação, rotação, escala uniforme)  
+✅ **4. Sombreamento constante com Z-buffer**  
+✅ **5. Sombreamento Phong com Z-buffer**  
+✅ **6. Parâmetros editáveis em tempo real**  
+✅ **7. Pipeline de Alvy Ray Smith completo**
+
+---
+
+## Instalação
+
+### Dependências
+- Python 3.10+
+- pygame 2.5.2+
+- numpy 1.24.0+
+
+### Instalação Rápida
+
+```bash
+# Instalar dependências
+pip install pygame numpy
+
+# Executar
+python main.py
+```
+
+### Instalação com Ambiente Virtual (Recomendado)
+
+```bash
+# Criar ambiente virtual
+python -m venv venv
+
+# Ativar (Linux/macOS)
+source venv/bin/activate
+
+# Ativar (Windows)
+venv\Scripts\activate
+
+# Instalar dependências
+pip install pygame numpy
+
+# Executar
+python main.py
+```
+
+---
+
+## Controles
+
+### Objetos
+- **N** - Adicionar novo cubo
+- **TAB** - Selecionar próximo objeto
+- **DELETE** - Remover objeto selecionado
+
+### Transformações (objeto selecionado)
+- **W/S** - Mover Y (cima/baixo)
+- **A/D** - Mover X (esquerda/direita)
+- **Q/E** - Mover Z (frente/trás)
+- **X** - Rotacionar no eixo X (15°)
+- **Y** - Rotacionar no eixo Y (15°)
+- **Z** - Rotacionar no eixo Z (15°)
+- **+/-** - Escalar (uniforme)
+
+### Visualização
+- **Mouse** (arrastar) - Rotacionar câmera
+- **F1** - Alternar sombreamento (Constant ↔ Phong)
+- **ESC** - Sair
+
+---
+
+## Pipeline de Alvy Ray Smith
+
+O programa implementa todas as etapas do pipeline gráfico:
+
+1. **Transformação de Modelo** - Aplica transformações aos vértices
+2. **Transformação de Visão** - Converte para espaço da câmera
+3. **Transformação de Projeção** - Projeção perspectiva
+4. **Divisão Perspectiva** - Normalização (NDC)
+5. **Recorte** - Back-face culling
+6. **Transformação de Viewport** - Conversão para tela
+7. **Rasterização** - Scanline com Z-buffer
+8. **Sombreamento** - Constant ou Phong
+
+### Z-buffer
+Algoritmo de ocultação de superfícies que determina quais faces são visíveis. Utiliza interpolação baricêntrica para calcular profundidade de cada pixel.
+
+### Sombreamento
+- **Constant (Flat):** Iluminação calculada uma vez por face
+- **Phong:** Modelo Blinn-Phong com componentes ambiente, difuso e especular
+
+---
+
+## Estrutura do Código
+
+O arquivo `main.py` contém todas as classes necessárias:
+
+- **Transformações** - Matrizes 4x4 (translação, rotação, escala)
+- **Cube** - Geometria e transformações do cubo
+- **Camera** - Câmera virtual e projeção perspectiva
+- **Light** - Fonte de luz pontual
+- **Renderer** - Pipeline completo de renderização
+- **Modeler3D** - Aplicação principal
+
+---
+
+## Envio do Trabalho
+
+### Por Email
+
+**Para:** prof.stacatarina@gmail.com  
+**Assunto:** Trabalho Final - CG 2025 - [Seu Nome]
+
+**Conteúdo do email:**
+```
+Prezado Professor Adair,
+
+Segue em anexo o código-fonte do Trabalho Final de Computação Gráfica.
+
+Nome: [Seu Nome Completo]
+RA: [Seu RA]
+
+EXECUÇÃO:
+1. pip install pygame numpy
+2. python main.py
+
+Sistema: Linux/Windows/macOS
+Python: 3.10+
+
+Atenciosamente,
+[Seu Nome]
+```
+
+### Preparar ZIP
+
+```bash
+# Criar arquivo ZIP (sem ambientes virtuais)
+zip -r modelador3d.zip main.py README.md
+
+# Ou no Windows
+# Selecionar main.py e README.md → Botão direito → Enviar para → Pasta compactada
+```
+
+---
+
+## Solução de Problemas
+
+**Erro: "No module named 'pygame'"**
+```bash
+pip install pygame numpy
+```
+
+**Janela não abre**
+- Verificar drivers de vídeo atualizados
+- Testar com `python main.py`
+
+**Performance baixa (FPS < 30)**
+- Usar sombreamento Constant (F1)
+- Reduzir número de cubos
+
+---
+
+**Data de Entrega:** 09/02/2026  
+**Apresentação:** 12/02/2026

@@ -2,8 +2,6 @@
 Modelador 3D - Trabalho Final de Computação Gráfica
 UNIOESTE - 2025
 Pipeline de Alvy Ray Smith
-
-Autor: [Seu Nome Completo]
 """
 
 import pygame
